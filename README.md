@@ -18,7 +18,7 @@ Then server responds with:
 ```
 Welcome to goess game!
 Guess a number between 1 and 100 (Both ends are included)
-You only have 10 guesses! 66
+You only have 10 guesses!
 
 Guess 1 =>
 ```
