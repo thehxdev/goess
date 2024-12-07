@@ -72,6 +72,7 @@ func main() {
 				}
 				conn_count += 1
 				mu.Unlock()
+
 				remoteAddr := conn.RemoteAddr().String()
 				conn_map.Store(g.id, g)
 
@@ -102,9 +103,8 @@ func (g *Game) startGame() error {
 	reader := bufio.NewReader(conn)
 	fmt.Fprintf(
 		conn,
-		"Welcome to goess game!\nGuess a number between 1 and 100 (Both ends are included)\nYou only have %d guesses! %d\n\n",
+		"Welcome to goess game!\nGuess a number between 1 and 100 (Both ends are included)\nYou only have %d guesses!\n\n",
 		GUESS_LIMIT,
-		randnum,
 	)
 
 	for {
